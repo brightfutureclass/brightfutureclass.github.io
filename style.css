@@ -202,3 +202,40 @@ footer { background-color: #333; color: var(--white); padding-top: 50px; }
     opacity: 1;
     transform: translateX(0);
 }
+/* --- CODE MỚI THÊM LOGO CHỮ --- */
+
+/* 1. Căn chỉnh ảnh và chữ nằm ngang hàng */
+.logo-link {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa Logo tròn và Chữ */
+    text-decoration: none;
+}
+
+/* 2. Chỉnh kích thước Logo tròn */
+.logo img {
+    height: 60px; /* Chiều cao logo */
+    width: auto;
+}
+
+/* 3. Trang trí chữ BRIGHT FUTURE */
+.brand-name {
+    color: #00A651; /* Màu xanh lá cây chuẩn logo */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; /* Chữ siêu đậm */
+    font-size: 26px; /* Kích thước chữ */
+    text-transform: uppercase; /* Tự động viết hoa */
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+    line-height: 1;
+}
+
+/* 4. Chỉnh cho điện thoại (Chữ nhỏ lại một chút cho đỡ chật) */
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 18px; /* Trên điện thoại chữ bé hơn */
+        display: block; /* Vẫn hiện chữ */
+    }
+    .logo img {
+        height: 45px; /* Logo bé hơn chút trên điện thoại */
+    }
+}
