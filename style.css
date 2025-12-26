@@ -202,40 +202,35 @@ footer { background-color: #333; color: var(--white); padding-top: 50px; }
     opacity: 1;
     transform: translateX(0);
 }
-/* --- CODE MỚI THÊM LOGO CHỮ --- */
+/* --- SỬA LẠI ĐOẠN NÀY ĐỂ CHỮ TO HƠN --- */
 
-/* 1. Căn chỉnh ảnh và chữ nằm ngang hàng */
+.brand-name {
+    color: #00A651; /* Màu xanh lá chuẩn */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* Độ đậm tối đa (Black) */
+    font-size: 52px; /* Tăng kích thước chữ lên LỚN */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Kéo dãn khoảng cách các chữ cái ra */
+    line-height: 1;
+    white-space: nowrap; /* Bắt buộc nằm trên 1 dòng */
+    display: inline-block; /* Để nhận các thuộc tính kích thước */
+}
+
+/* Chỉnh lại căn giữa cho đẹp với chữ to */
 .logo-link {
     display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    gap: 15px; /* Khoảng cách giữa Logo tròn và Chữ */
+    align-items: center;
+    gap: 20px; /* Tăng khoảng cách giữa Logo tròn và Chữ */
     text-decoration: none;
 }
 
-/* 2. Chỉnh kích thước Logo tròn */
-.logo img {
-    height: 60px; /* Chiều cao logo */
-    width: auto;
-}
-
-/* 3. Trang trí chữ BRIGHT FUTURE */
-.brand-name {
-    color: #00A651; /* Màu xanh lá cây chuẩn logo */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800; /* Chữ siêu đậm */
-    font-size: 26px; /* Kích thước chữ */
-    text-transform: uppercase; /* Tự động viết hoa */
-    letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
-    line-height: 1;
-}
-
-/* 4. Chỉnh cho điện thoại (Chữ nhỏ lại một chút cho đỡ chật) */
+/* Vẫn giữ nhỏ gọn trên điện thoại để không bị vỡ giao diện */
 @media (max-width: 768px) {
     .brand-name {
-        font-size: 18px; /* Trên điện thoại chữ bé hơn */
-        display: block; /* Vẫn hiện chữ */
+        font-size: 20px; /* Mobile để nhỏ thôi */
+        letter-spacing: 1px;
     }
     .logo img {
-        height: 45px; /* Logo bé hơn chút trên điện thoại */
+        height: 50px;
     }
 }
