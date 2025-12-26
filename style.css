@@ -234,3 +234,50 @@ footer { background-color: #333; color: var(--white); padding-top: 50px; }
         height: 50px;
     }
 }
+/* --- HIỆU ỨNG NỀN ĐỘNG (BACKGROUND ANIMATION) --- */
+
+/* 1. Khung chứa toàn bộ icon nền */
+#background-container {
+    position: fixed; /* Cố định để không bị trôi khi cuộn chuột */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ẩn những thứ bay ra ngoài màn hình */
+    z-index: -1; /* QUAN TRỌNG: Để nằm dưới cùng, không che chữ */
+    pointer-events: none; /* Để chuột bấm xuyên qua được */
+}
+
+/* 2. Định dạng chung cho các icon (Sao, Sách...) */
+.floating-item {
+    position: absolute;
+    color: #00A651; /* Màu xanh thương hiệu */
+    opacity: 0.15; /* Độ mờ (0.1 là rất mờ, 1 là rõ) */
+    animation: floatBackground linear infinite; /* Gọi chuyển động */
+}
+
+/* 3. Tạo chuyển động "Vô hướng" (Bay lung tung) */
+@keyframes floatBackground {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(50px, 50px) rotate(45deg);
+    }
+    50% {
+        transform: translate(0, 100px) rotate(90deg);
+    }
+    75% {
+        transform: translate(-50px, 50px) rotate(135deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+/* Responsive: Trên điện thoại giảm bớt số lượng/kích thước nếu cần */
+@media (max-width: 768px) {
+    .floating-item {
+        opacity: 0.1; /* Mờ hơn chút trên điện thoại */
+    }
+}
