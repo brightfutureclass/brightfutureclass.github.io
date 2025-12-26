@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Future - Khởi Đầu Tương Lai Tươi Sáng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <nav>
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#about">Về Bright Future</a></li>
+                    <li><a href="#courses">Khóa học</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="#home">
+                    <img src="link_hinh_anh_logo_so_2.png" alt="Bright Future Logo">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-left animate-scroll">
+                <img src="link_hinh_anh_so_1.jpg" alt="Bright Future Key Visual" class="brand-visual">
+            </div>
+            <div class="hero-right animate-scroll">
+                <img src="link_anh_trung_tam_thuc_te.jpg" alt="Lớp học thực tế" class="real-image">
+            </div>
+        </div>
+        <div class="star-bg star-1"><i class="fas fa-star"></i></div>
+        <div class="star-bg star-2"><i class="fas fa-star"></i></div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="intro-text animate-scroll">
+                <h2 class="section-title">Về Bright Future</h2>
+                <p>Chúng tôi kiến tạo nền tảng vững chắc cho tương lai của học sinh thông qua phương pháp giáo dục hiện đại và tận tâm.</p>
+            </div>
+
+            <div class="teachers-section">
+                <h3 class="sub-title animate-scroll">Đội ngũ Giáo viên</h3>
+                <div class="grid-list">
+                    <div class="grid-item animate-scroll" onclick="openModal('teacher1')">
+                        <div class="thumb-img">
+                            <img src="link_anh_gv_1.jpg" alt="GV 1">
+                        </div>
+                        <div class="info">
+                            <h4>Nguyễn Văn A</h4>
+                            <p>THPT Chuyên Sư Phạm</p>
+                        </div>
+                    </div>
+                    <div class="grid-item animate-scroll" onclick="openModal('teacher2')">
+                        <div class="thumb-img">
+                            <img src="link_anh_gv_2.jpg" alt="GV 2">
+                        </div>
+                        <div class="info">
+                            <h4>Trần Thị B</h4>
+                            <p>Đại học Ngoại Ngữ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="students-section mt-50">
+                <h3 class="sub-title animate-scroll">Gương mặt Học viên tiêu biểu</h3>
+                <div class="grid-list">
+                    <div class="grid-item animate-scroll" onclick="openModal('student1')">
+                        <div class="thumb-img">
+                             <img src="link_anh_hv_1.jpg" alt="HV 1">
+                        </div>
+                        <div class="info">
+                            <h4>Lê Văn C</h4>
+                            <p>8.0 IELTS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-scroll">Chương Trình Đào Tạo</h2>
+            <div class="courses-grid">
+                <div class="course-card animate-scroll">
+                    <div class="icon-course"><i class="fas fa-calculator"></i></div>
+                    <h3>Toán Học</h3>
+                    <p>Tư duy logic, bám sát chương trình SGK mới và luyện thi chuyên sâu.</p>
+                </div>
+                <div class="course-card animate-scroll">
+                    <div class="icon-course"><i class="fas fa-pen-nib"></i></div>
+                    <h3>Ngữ Văn</h3>
+                    <p>Khơi nguồn cảm hứng, rèn luyện kỹ năng viết và cảm thụ văn học.</p>
+                </div>
+                <div class="course-card animate-scroll">
+                    <div class="icon-course"><i class="fas fa-language"></i></div>
+                    <h3>Tiếng Anh</h3>
+                    <p>Giao tiếp phản xạ, ngữ pháp chuyên sâu và luyện thi chứng chỉ quốc tế.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="registration-section section-padding">
+        <div class="container animate-scroll">
+            <h2 class="section-title">Đăng Ký Tư Vấn Lộ Trình Miễn Phí</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Lưu ý: Trường thông tin có dấu (*) là bắt buộc</p>
+            
+            <form class="reg-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Tên bạn là (*)" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Họ tên phụ huynh (*)" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email (*)" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Số điện thoại (*)" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" placeholder="Trường đang học" class="half-width">
+                    <input type="text" placeholder="Lớp đang học" class="half-width">
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">-- Môn học đăng ký --</option>
+                        <option value="toan">Toán Học</option>
+                        <option value="van">Ngữ Văn</option>
+                        <option value="anh">Tiếng Anh</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">ĐĂNG KÝ NGAY</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Về Chúng Tôi</h3>
+                <p>Bright Future - Nơi chắp cánh ước mơ.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Địa Chỉ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Khu 6, xã Thanh Thủy, tỉnh Phú Thọ</p>
+            </div>
+            <div class="footer-col">
+                <h3>Kết Nối</h3>
+                <p><i class="fas fa-phone"></i>0931108666 </p>
+                <p><i class="fas fa-envelope"></i> trantuananh14012009@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright 2024 © Bright Future Center
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <div class="float-item" onclick="toggleLabel(this)">
+            <span class="label">trantuananh14012009@gmail.com</span>
+            <div class="icon-box email-icon"><i class="fas fa-envelope"></i></div>
+        </div>
+        <div class="float-item" onclick="toggleLabel(this)">
+            <span class="label">0931108666</span>
+            <div class="icon-box phone-icon"><i class="fas fa-phone"></i></div>
+        </div>
+        <div class="float-item" onclick="toggleLabel(this)">
+            <span class="label">Chat Zalo</span>
+            <div class="icon-box zalo-icon"><i class="fas fa-comment-dots"></i></div>
+        </div>
+    </div>
+
+    <div id="teacher1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('teacher1')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img src="link_anh_gv_1_full.jpg" alt="GV 1">
+                </div>
+                <div class="modal-text">
+                    <h3>Nguyễn Văn A</h3>
+                    <p class="highlight">8.0 IELTS Overall</p>
+                    <p>Tốt nghiệp xuất sắc Đại học Sư Phạm Hà Nội.</p>
+                    <p>5 năm kinh nghiệm giảng dạy chuyên sâu.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="teacher2" class="modal">
+         <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('teacher2')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img src="link_anh_gv_2_full.jpg" alt="GV 2">
+                </div>
+                <div class="modal-text">
+                    <h3>Trần Thị B</h3>
+                    <p class="highlight">Thạc sĩ Ngôn ngữ học</p>
+                    <p>Giảng viên Đại học Ngoại Ngữ.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

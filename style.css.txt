@@ -1,0 +1,204 @@
+/* --- BIẾN MÀU SẮC --- */
+:root {
+    --primary-green: #00A651; /* Xanh lá cây đậm logo */
+    --light-green-bg: #F0FCE4; /* Xanh nõn chuối nhạt làm nền */
+    --white: #ffffff;
+    --text-color: #333333;
+    --accent-yellow: #FFD700; /* Màu vàng cho sao/điểm nhấn */
+}
+
+/* --- CẤU TRÚC CHUNG --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-green-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+a { text-decoration: none; }
+ul { list-style: none; }
+
+/* --- HEADER --- */
+header {
+    background-color: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Logo phải, Menu trái */
+    align-items: center;
+    flex-direction: row-reverse; /* Đảo ngược để Logo sang phải */
+}
+.logo img { height: 60px; transition: transform 0.3s; }
+.logo img:hover { transform: scale(1.1); }
+
+nav ul { display: flex; gap: 30px; }
+nav a {
+    color: var(--primary-green);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+nav a:hover { color: #007a3a; border-bottom: 2px solid #007a3a; }
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+.hero-grid { display: flex; align-items: center; gap: 30px; }
+.hero-left, .hero-right { flex: 1; }
+.hero img { width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+/* Sao trang trí */
+.star-bg { position: absolute; color: var(--accent-yellow); opacity: 0.3; z-index: -1; }
+.star-1 { top: 10%; left: 5%; font-size: 50px; }
+.star-2 { bottom: 20%; right: 10%; font-size: 80px; }
+
+/* --- ABOUT & TEACHERS --- */
+.section-padding { padding: 60px 0; }
+.section-title {
+    text-align: center;
+    color: var(--primary-green);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.sub-title { color: var(--primary-green); font-size: 24px; margin-bottom: 20px; border-left: 5px solid var(--primary-green); padding-left: 10px; }
+.intro-text p { text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 18px; }
+
+.grid-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.grid-item {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.grid-item:hover { transform: translateY(-5px); }
+.thumb-img img { width: 100%; height: 250px; object-fit: cover; }
+.grid-item .info { padding: 15px; text-align: center; }
+.grid-item .info h4 { color: var(--primary-green); margin-bottom: 5px; }
+
+/* --- COURSES --- */
+#courses { background-color: rgba(255,255,255,0.5); } /* Nền trắng mờ để tách biệt */
+.courses-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.course-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid var(--primary-green);
+    transition: 0.3s;
+}
+.course-card:hover { background: var(--primary-green); color: var(--white); }
+.course-card:hover .icon-course { color: var(--white); }
+.icon-course { font-size: 40px; color: var(--primary-green); margin-bottom: 15px; }
+.course-card h3 { margin-bottom: 10px; font-size: 22px; }
+
+/* --- FORM --- */
+.registration-section { background: var(--white); border-top: 5px solid var(--primary-green); }
+.reg-form { max-width: 600px; margin: 0 auto; }
+.form-group { margin-bottom: 15px; }
+.form-row { display: flex; gap: 15px; margin-bottom: 15px; }
+.half-width { flex: 1; }
+input, select {
+    width: 100%; padding: 12px;
+    border: 1px solid #ddd; border-radius: 5px;
+    font-family: inherit;
+}
+.btn-submit {
+    width: 100%; padding: 15px;
+    background: var(--primary-green);
+    color: var(--white);
+    border: none; border-radius: 5px;
+    font-weight: bold; font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-submit:hover { background: #007a3a; }
+
+/* --- FOOTER --- */
+footer { background-color: #333; color: var(--white); padding-top: 50px; }
+.footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-bottom: 30px; }
+.footer-col h3 { color: var(--primary-green); margin-bottom: 20px; }
+.footer-col p { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.copyright { background: #222; text-align: center; padding: 15px; font-size: 14px; }
+
+/* --- FLOATING BUTTONS --- */
+.floating-buttons { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 2000; }
+.float-item {
+    display: flex; align-items: center; justify-content: flex-end;
+    margin-bottom: 10px; cursor: pointer;
+}
+.icon-box {
+    width: 50px; height: 50px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-size: 24px;
+    border-radius: 5px 0 0 5px;
+}
+.email-icon { background: #d93025; }
+.phone-icon { background: #f4b400; }
+.zalo-icon { background: #0068ff; }
+
+.label {
+    background: var(--white); padding: 10px 15px;
+    border: 1px solid #ddd; margin-right: 5px; border-radius: 5px;
+    display: none; /* Ẩn mặc định */
+    font-weight: bold; color: #333;
+}
+.float-item.active .label { display: block; }
+
+/* --- MODAL POPUP --- */
+.modal {
+    display: none; position: fixed; z-index: 3000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto; padding: 0;
+    width: 80%; max-width: 900px;
+    border-radius: 10px; position: relative;
+    animation: slideDown 0.4s;
+}
+@keyframes slideDown { from {top: -100px; opacity: 0;} to {top: 5%; opacity: 1;} }
+.close-btn {
+    position: absolute; right: 15px; top: 10px;
+    font-size: 30px; font-weight: bold; color: #aaa; cursor: pointer;
+}
+.modal-body { display: flex; }
+.modal-img { flex: 1; }
+.modal-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px 0 0 10px; }
+.modal-text { flex: 1.5; padding: 40px; }
+.modal-text h3 { font-size: 28px; color: var(--primary-green); margin-bottom: 10px; }
+.highlight { font-weight: bold; font-size: 18px; margin-bottom: 15px; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .header-content { flex-direction: column-reverse; gap: 10px; }
+    nav ul { gap: 15px; font-size: 14px; }
+    .hero-grid { flex-direction: column; }
+    .courses-grid, .footer-grid, .modal-body { grid-template-columns: 1fr; flex-direction: column; }
+    .modal-img img { border-radius: 10px 10px 0 0; height: 300px; }
+}
+
+/* --- ANIMATION SCROLL --- */
+.animate-scroll {
+    opacity: 0;
+    transform: translateX(-50px); /* Dịch sang trái */
+    transition: all 1s ease-out;
+}
+.animate-scroll.show-slide {
+    opacity: 1;
+    transform: translateX(0);
+}
