@@ -131,34 +131,40 @@
             <h2 class="section-title">Đăng Ký Tư Vấn Lộ Trình Miễn Phí</h2>
             <p style="text-align: center; margin-bottom: 20px;">Lưu ý: Trường thông tin có dấu (*) là bắt buộc</p>
             
-            <form class="reg-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Tên bạn là (*)" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Họ tên phụ huynh (*)" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email (*)" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Số điện thoại (*)" required>
-                </div>
-                <div class="form-row">
-                    <input type="text" placeholder="Trường đang học" class="half-width">
-                    <input type="text" placeholder="Lớp đang học" class="half-width">
-                </div>
-                <div class="form-group">
-                    <select required>
-                        <option value="">-- Môn học đăng ký --</option>
-                        <option value="toan">Toán Học</option>
-                        <option value="van">Ngữ Văn</option>
-                        <option value="anh">Tiếng Anh</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-submit">ĐĂNG KÝ NGAY</button>
-            </form>
-        </div>
+           <form class="reg-form" action="https://formspree.io/f/xgoevzvz" method="POST">
+    
+    <div class="form-group">
+        <input type="text" name="Ten_Hoc_Sinh" placeholder="Tên bạn là (*)" required>
+    </div>
+    
+    <div class="form-group">
+        <input type="text" name="Ten_Phu_Huynh" placeholder="Họ tên phụ huynh (*)" required>
+    </div>
+    
+    <div class="form-group">
+        <input type="email" name="Email" placeholder="Email (*)" required>
+    </div>
+    
+    <div class="form-group">
+        <input type="tel" name="So_Dien_Thoai" placeholder="Số điện thoại (*)" required>
+    </div>
+    
+    <div class="form-row">
+        <input type="text" name="Truong_Hoc" placeholder="Trường đang học" class="half-width">
+        <input type="text" name="Lop_Hoc" placeholder="Lớp đang học" class="half-width">
+    </div>
+    
+    <div class="form-group">
+        <select name="Mon_Hoc_Dang_Ky" required>
+            <option value="">-- Môn học đăng ký --</option>
+            <option value="Toan">Toán Học</option>
+            <option value="Van">Ngữ Văn</option>
+            <option value="Anh">Tiếng Anh</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn-submit">ĐĂNG KÝ NGAY</button>
+</form>
     </section>
 
     <footer id="contact">
@@ -233,6 +239,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
